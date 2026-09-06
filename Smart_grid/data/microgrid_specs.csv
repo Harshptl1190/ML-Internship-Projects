@@ -1,0 +1,14 @@
+component,parameter,value
+Solar PV array,rated_capacity_kw,500.0
+Wind turbine bank,rated_capacity_kw,300.0
+Battery Energy Storage (BESS),usable_capacity_kwh,800.0
+Battery Energy Storage (BESS),max_charge_power_kw,200.0
+Battery Energy Storage (BESS),max_discharge_power_kw,200.0
+Battery Energy Storage (BESS),round_trip_efficiency,0.92
+Battery Energy Storage (BESS),min_soc_fraction,0.15
+Battery Energy Storage (BESS),max_soc_fraction,0.95
+Battery Energy Storage (BESS),cycle_life_at_80pct_dod,4500.0
+Battery Energy Storage (BESS),replacement_cost_inr_per_kwh,9500.0
+Diesel/gas backup genset,rated_capacity_kw,250.0
+Diesel/gas backup genset,fuel_cost_inr_per_kwh,21.5
+Diesel/gas backup genset,co2_emission_kg_per_kwh,0.82
