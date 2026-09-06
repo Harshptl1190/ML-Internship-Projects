@@ -1,0 +1,92 @@
+[
+  {
+    "id": "T01",
+    "description": "Generated dataset has zero missing values",
+    "status": "Pass",
+    "detail": "NaN count = 0"
+  },
+  {
+    "id": "T02",
+    "description": "PV output stays within rated capacity (500 kW)",
+    "status": "Pass",
+    "detail": "max = 500.0 kW"
+  },
+  {
+    "id": "T03",
+    "description": "Wind output stays within rated capacity (300 kW)",
+    "status": "Pass",
+    "detail": "max = 137.0 kW"
+  },
+  {
+    "id": "T04",
+    "description": "Grid tariff matches declared ToU slab set",
+    "status": "Pass",
+    "detail": "unique values = [np.float64(3.75), np.float64(6.1), np.float64(8.2), np.float64(9.5)]"
+  },
+  {
+    "id": "T05",
+    "description": "Battery power stays within rated charge/discharge limits",
+    "status": "Pass",
+    "detail": "max |batt_kw| = 130.0 kW"
+  },
+  {
+    "id": "T06",
+    "description": "State of Charge remains within [15%, 95%] bounds",
+    "status": "Pass",
+    "detail": "SOC range = [0.300, 0.950]"
+  },
+  {
+    "id": "T07",
+    "description": "Hourly energy balance holds (generation - curtailment + storage + diesel + grid == demand)",
+    "status": "Pass",
+    "detail": "max imbalance = 0.0000 kW"
+  },
+  {
+    "id": "T08",
+    "description": "Unknown weather regime raises ValueError",
+    "status": "Pass",
+    "detail": ""
+  },
+  {
+    "id": "T09",
+    "description": "Overcast day has higher optimised cost than Sunny/High-Wind (physical sanity)",
+    "status": "Pass",
+    "detail": "Sunny=2626.27, HighWind=1966.22, Overcast=9252.13"
+  },
+  {
+    "id": "T10",
+    "description": "Degradation cost increases monotonically with deg_weight",
+    "status": "Pass",
+    "detail": "deg_cost(w=0)=0.00, deg_cost(w=3)=4468.46"
+  },
+  {
+    "id": "T11",
+    "description": "Diesel backup engages under extreme overcast + 60% demand spike",
+    "status": "Pass",
+    "detail": "peak diesel = 250.0 kW, CO2 = 2054.5 kg"
+  },
+  {
+    "id": "T12",
+    "description": "Diesel dispatch respects rated genset capacity under stress",
+    "status": "Pass",
+    "detail": "max diesel = 250.0 / 250.0 kW"
+  },
+  {
+    "id": "T13",
+    "description": "Grid import is never negative",
+    "status": "Pass",
+    "detail": ""
+  },
+  {
+    "id": "T14",
+    "description": "High reserve_soc setting keeps battery above the reserve floor",
+    "status": "Pass",
+    "detail": "min SOC observed = 0.400 (reserve = 0.40)"
+  },
+  {
+    "id": "T15",
+    "description": "BO best-cost-so-far curve is monotonically non-increasing",
+    "status": "Pass",
+    "detail": "curve range = [3061.1, 5351.8]"
+  }
+]

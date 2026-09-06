@@ -1,0 +1,74 @@
+{
+  "model_version": "2.2",
+  "evaluation_method": "chronological_train_test_split",
+  "dataset_records": 2880,
+  "n_train": 2304,
+  "n_test": 576,
+  "training_days": 96,
+  "testing_days": 24,
+  "backend_results": {
+    "RandomForest": {
+      "pv_output_kw": {
+        "MAE": 8.267,
+        "RMSE": 14.782,
+        "R2": 0.9928
+      },
+      "wind_output_kw": {
+        "MAE": 2.41,
+        "RMSE": 3.655,
+        "R2": 0.9601
+      },
+      "load_demand_kw": {
+        "MAE": 8.171,
+        "RMSE": 10.283,
+        "R2": 0.879
+      }
+    },
+    "HistGradientBoosting": {
+      "pv_output_kw": {
+        "MAE": 3.692,
+        "RMSE": 9.639,
+        "R2": 0.997
+      },
+      "wind_output_kw": {
+        "MAE": 0.198,
+        "RMSE": 0.982,
+        "R2": 0.9971
+      },
+      "load_demand_kw": {
+        "MAE": 7.311,
+        "RMSE": 9.295,
+        "R2": 0.9012
+      }
+    }
+  },
+  "avg_r2_by_backend": {
+    "RandomForest": 0.944,
+    "HistGradientBoosting": 0.9651
+  },
+  "selected_backend": "HistGradientBoosting",
+  "features": [
+    "solar_irradiance_wm2",
+    "wind_speed_ms",
+    "ambient_temp_c",
+    "humidity_pct",
+    "hour_sin",
+    "hour_cos",
+    "day_of_week"
+  ],
+  "targets": [
+    "pv_output_kw",
+    "wind_output_kw",
+    "load_demand_kw"
+  ],
+  "feature_importance_method": "absolute_correlation_proxy",
+  "feature_importance": {
+    "hour_cos": 0.2166,
+    "solar_irradiance_wm2": 0.216,
+    "ambient_temp_c": 0.1673,
+    "wind_speed_ms": 0.1593,
+    "humidity_pct": 0.129,
+    "day_of_week": 0.0735,
+    "hour_sin": 0.0383
+  }
+}

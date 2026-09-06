@@ -1,0 +1,106 @@
+{
+    "method": "ML Surrogate + Gaussian Process Bayesian Optimization",
+    "optimizer": {
+        "initial_samples": 12,
+        "iterations": 25,
+        "candidates_per_iteration": 800,
+        "acquisition": "Expected Improvement",
+        "kernel": "Matern",
+        "hyperparameter_optimization": false,
+        "baseline_protection": true
+    },
+    "baseline_policy": {
+        "charge_price_thr": 4.75,
+        "discharge_price_thr": 7.75,
+        "max_chg_frac": 0.65,
+        "max_dis_frac": 0.65,
+        "reserve_soc": 0.3,
+        "diesel_trigger_frac": 0.8,
+        "deg_weight": 1.0
+    },
+    "test_days": {
+        "Sunny": 104,
+        "High Wind": 117,
+        "Overcast": 100
+    },
+    "results": {
+        "Sunny": {
+            "day": 104,
+            "baseline_cost": 5836.732477095086,
+            "forecast_optimized_cost": 2.0873182394186314,
+            "optimized_cost": 5836.732477095086,
+            "savings": 0.0,
+            "savings_percent": 0.0,
+            "policy": {
+                "charge_price_thr": 4.75,
+                "discharge_price_thr": 7.75,
+                "max_chg_frac": 0.65,
+                "max_dis_frac": 0.65,
+                "reserve_soc": 0.3,
+                "diesel_trigger_frac": 0.8,
+                "deg_weight": 1.0
+            },
+            "breakdown": {
+                "grid": 4347.2455049670325,
+                "diesel": 0.0,
+                "degradation": 1489.4869721280543,
+                "carbon": 0.0,
+                "co2_kg": 0.0
+            }
+        },
+        "High Wind": {
+            "day": 117,
+            "baseline_cost": 4057.8460422019766,
+            "forecast_optimized_cost": 0.6522557368850965,
+            "optimized_cost": 2270.080517639164,
+            "savings": 1787.7655245628125,
+            "savings_percent": 44.05700723905946,
+            "policy": {
+                "charge_price_thr": 4.442000042637896,
+                "discharge_price_thr": 6.616859537891063,
+                "max_chg_frac": 0.35242189347529346,
+                "max_dis_frac": 0.7527145423119244,
+                "reserve_soc": 0.25259116365685397,
+                "diesel_trigger_frac": 0.8230779085714208,
+                "deg_weight": 0.0013170983680905746
+            },
+            "breakdown": {
+                "grid": 2268.258456191646,
+                "diesel": 0.0,
+                "degradation": 1.8220614475177987,
+                "carbon": 0.0,
+                "co2_kg": 0.0
+            }
+        },
+        "Overcast": {
+            "day": 100,
+            "baseline_cost": 9807.792143761752,
+            "forecast_optimized_cost": 2.003846520786004,
+            "optimized_cost": 9807.792143761752,
+            "savings": 0.0,
+            "savings_percent": 0.0,
+            "policy": {
+                "charge_price_thr": 4.75,
+                "discharge_price_thr": 7.75,
+                "max_chg_frac": 0.65,
+                "max_dis_frac": 0.65,
+                "reserve_soc": 0.3,
+                "diesel_trigger_frac": 0.8,
+                "deg_weight": 1.0
+            },
+            "breakdown": {
+                "grid": 7934.378504967031,
+                "diesel": 0.0,
+                "degradation": 1873.413638794721,
+                "carbon": 0.0,
+                "co2_kg": 0.0
+            }
+        }
+    },
+    "summary": {
+        "total_baseline_cost": 19702.370663058813,
+        "total_optimized_cost": 17914.605138496,
+        "total_savings": 1787.765524562812,
+        "total_savings_percent": 9.073859969119368
+    }
+}

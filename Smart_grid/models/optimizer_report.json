@@ -1,0 +1,59 @@
+{
+  "Sunny": {
+    "best_cost_inr": 2626.27,
+    "theta": {
+      "charge_price_thr": 3.5271,
+      "discharge_price_thr": 6.0066,
+      "max_chg_frac": 0.3196,
+      "max_dis_frac": 0.9906,
+      "reserve_soc": 0.1531,
+      "diesel_trigger_frac": 0.7986,
+      "deg_weight": 0.0258
+    },
+    "cost_breakdown_inr": {
+      "grid": 2584.08,
+      "diesel": 0.0,
+      "degradation": 42.19,
+      "carbon": 0.0,
+      "co2_kg": 0.0
+    }
+  },
+  "High Wind": {
+    "best_cost_inr": 1966.22,
+    "theta": {
+      "charge_price_thr": 3.2175,
+      "discharge_price_thr": 6.0248,
+      "max_chg_frac": 0.4037,
+      "max_dis_frac": 0.9199,
+      "reserve_soc": 0.1903,
+      "diesel_trigger_frac": 0.8494,
+      "deg_weight": 0.1321
+    },
+    "cost_breakdown_inr": {
+      "grid": 1756.83,
+      "diesel": 0.0,
+      "degradation": 209.39,
+      "carbon": 0.0,
+      "co2_kg": 0.0
+    }
+  },
+  "Overcast": {
+    "best_cost_inr": 9252.13,
+    "theta": {
+      "charge_price_thr": 3.9997,
+      "discharge_price_thr": 7.5397,
+      "max_chg_frac": 0.7686,
+      "max_dis_frac": 0.8609,
+      "reserve_soc": 0.1573,
+      "diesel_trigger_frac": 0.761,
+      "deg_weight": 0.0132
+    },
+    "cost_breakdown_inr": {
+      "grid": 9220.77,
+      "diesel": 0.0,
+      "degradation": 31.36,
+      "carbon": 0.0,
+      "co2_kg": 0.0
+    }
+  }
+}
